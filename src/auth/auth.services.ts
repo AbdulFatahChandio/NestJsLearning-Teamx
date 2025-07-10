@@ -52,9 +52,9 @@ export class AuthService {
 
     // compare password
     const matchPassword = await bcrypt.compare(dto.password ,user.hash )
-    console.log("🚀 ~ AuthService ~ signin ~ dto.password:", dto.password)
-    console.log("🚀 ~ AuthService ~ signin ~ user.hash:", user.hash)
-    console.log("🚀 ~ AuthService ~ signin ~ matchPassword:", matchPassword)
+    //console.log("🚀 ~ AuthService ~ signin ~ dto.password:", dto.password)
+    //console.log("🚀 ~ AuthService ~ signin ~ user.hash:", user.hash)
+    //console.log("🚀 ~ AuthService ~ signin ~ matchPassword:", matchPassword)
     if (!matchPassword)
       throw new ForbiddenException(
         'Credentials incorrect',
