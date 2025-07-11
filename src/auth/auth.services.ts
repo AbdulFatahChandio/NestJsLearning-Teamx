@@ -59,9 +59,15 @@ export class AuthService {
 
     // compare password
     const matchPassword = await bcrypt.compare(dto.password ,user.hash )
+<<<<<<< HEAD
     // console.log("🚀 ~ AuthService ~ signin ~ dto.password:", dto.password)
     // console.log("🚀 ~ AuthService ~ signin ~ user.hash:", user.hash)
     // console.log("🚀 ~ AuthService ~ signin ~ matchPassword:", matchPassword)
+=======
+    //console.log("🚀 ~ AuthService ~ signin ~ dto.password:", dto.password)
+    //console.log("🚀 ~ AuthService ~ signin ~ user.hash:", user.hash)
+    //console.log("🚀 ~ AuthService ~ signin ~ matchPassword:", matchPassword)
+>>>>>>> 08973359d264cf778f9a053057f8e94ff43e1f2e
     if (!matchPassword)
       throw new ForbiddenException(
         'Credentials incorrect',
@@ -70,6 +76,7 @@ export class AuthService {
             //return the saved user 
       return this.signToken(user.id, user.email);
     }
+<<<<<<< HEAD
     async signToken(
         userId: number,
         email: string,
@@ -124,3 +131,6 @@ export class AuthService {
 //     expiresIn: '15m'
 //   })
 // }
+=======
+}
+>>>>>>> 08973359d264cf778f9a053057f8e94ff43e1f2e
